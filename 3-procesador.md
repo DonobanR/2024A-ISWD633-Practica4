@@ -1,4 +1,4 @@
-# Limitar uso de procesador
+![image](https://github.com/DonobanR/2024A-ISWD633-Practica4/assets/135273301/976ffcbf-bce7-44dd-b83e-e86cc25fa7f8)# Limitar uso de procesador
 Limitar la cantidad de núcleos de CPU:
 ```
 --cpus=<número de núcleos>
@@ -10,6 +10,17 @@ Asignar núcleos de CPU específicos:
 ```
 
 **¿Como saber el numero de procesadores virtuales que tiene una máquina?**
+por medio de la siguiente liena de comanndo:
+
+```
+docker inspect --format='{{.HostConfig.CpuCount}}' server-nginx
+```
+
+solo verifica que este bien configurado tu docker:
+
+![image](https://github.com/DonobanR/2024A-ISWD633-Practica4/assets/135273301/16309d2c-1a91-48fb-87f1-33dcd4f8564c)
+
+
 ## COMPLETAR
 
 ## Ejemplos

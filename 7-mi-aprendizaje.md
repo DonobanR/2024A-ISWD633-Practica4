@@ -1,3 +1,1 @@
-# COMPLETAR  
-Comparando sus conocimientos antes de hacer la práctica con sus conocimientos después de hacer la tarea, explicar los principales aprendizajes logrados para beneficio de su formación profesional.  
-Si solucionó un problema presentado al realizar la práctica también se debe documentar.
+Se exploró cómo crear, construir y gestionar Docker containers y images. Aprendí a escribir Dockerfiles para definir entornos reproducibles, mapear puertos entre el host y los contenedores para la conectividad, y aplicar políticas de reinicio para mantener la disponibilidad de los servicios. Además, abordamos el manejo de errores comunes al construir imágenes y la importancia de entender las directivas de reinicio para controlar el comportamiento de los contenedores en diferentes situaciones.

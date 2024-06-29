@@ -52,18 +52,43 @@ docker build -t <nombre imagen>:<version> .
  
 ### Ejecutar el archivo Dockerfile y construir una imagen en la versión 1.0
 _Puedes copiar y ejecutar directamente. No olvides verificar en qué directorio se encuentra el archivo Dockerfile
-```
 
+```
+docker build -t miapp:1.0 .
 ```
 
 **¿Cuántos pasos se han ejecutado?**
-# RESPONDER 
+Se ejecutaron alrededor de 2 pasos:
+
+ => [internal] load build definition from Dockerfile                                                               0.0s
+ => => transferring dockerfile: 215B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.0s
+ => [internal] load .dockerignore                                                                                  0.0s
+ => => transferring context: 2B                                                                                    0.0s
+ => [internal] load build context                                                                                  0.0s
+ => => transferring context: 32B                                                                                   0.0s
+ => [1/2] FROM docker.io/library/nginx:alpine                                                                      0.0s
+ => CACHED [2/2] COPY index.html c:Dockerfile                                                                      0.0s
+ => exporting to image                                                                                             0.0s
+ => => exporting layers                                                                                            0.0s
+ => => writing image sha256:eaa137968352a39aba5a0986ace5f5065f71ffc1e33e683aa0234cf2b1622aa6                       0.0s
+ => => naming to docker.io/library/miapp:1.0                                                                       0.0s
 
 ### Inspeccionar la imagen creada
-# COMPLETAR CON UNA CAPTURA
+# CAPTURA
+
+![image](https://github.com/DonobanR/2024A-ISWD633-Practica4/assets/135273301/baad30b8-9774-4e5f-8ec2-67d9e4e82c03)
+
+![image](https://github.com/DonobanR/2024A-ISWD633-Practica4/assets/135273301/c8ad4ab9-b229-46ec-883e-2d6afa4d5917)
+
+![image](https://github.com/DonobanR/2024A-ISWD633-Practica4/assets/135273301/89544341-b09e-44f6-8c01-dd62fa581efe)
+
+
 
 **Modificar el archivo index.html para incluir su nombre**
 **¿Cuántos pasos se han ejecutado? ¿Observa algo diferente en la creación de la imagen**
+
+Se ejecutaron 2 pasos, nada diferente.
 
 ## Mecanismo de caché
 Docker usa un mecanismo de caché cuando crea imágenes para acelerar el proceso de construcción y evitar la repetición de pasos que no han cambiado. Cada instrucción en un Dockerfile crea una capa en la imagen final. Docker intenta reutilizar las capas de una construcción anterior si no han cambiado, lo que reduce significativamente el tiempo de construcción.
@@ -75,14 +100,14 @@ Docker usa un mecanismo de caché cuando crea imágenes para acelerar el proceso
 
 ### Crear un contenedor a partir de las imagen creada, mapear todos los puertos
 ```
-
+docker run -d -p 80:80 --name miapp-container miapp:1.0
 ```
 
 ### ¿Con que puerto host se está realizando el mapeo?
-# COMPLETAR CON LA RESPUESTA
+Con el puerto 80
 
 **¿Qué es una imagen huérfana?**
-# COMPLETAR CON LA RESPUESTA
+Es una imagen que no tiene ninguna referencia o vínculo con ninguna otra imagen o contenedor en el sistema Docker
 
 ### Identificar imágenes huérfanas
 ```

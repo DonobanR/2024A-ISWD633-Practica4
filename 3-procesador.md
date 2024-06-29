@@ -10,6 +10,7 @@ Asignar núcleos de CPU específicos:
 ```
 
 **¿Como saber el numero de procesadores virtuales que tiene una máquina?**
+
 por medio de la siguiente liena de comanndo:
 
 ```
@@ -20,8 +21,6 @@ solo verifica que este bien configurado tu docker:
 
 ![image](https://github.com/DonobanR/2024A-ISWD633-Practica4/assets/135273301/16309d2c-1a91-48fb-87f1-33dcd4f8564c)
 
-
-## COMPLETAR
 
 ## Ejemplos
 _Puedes copiar y ejecutar directamente cada uno de los comandos_
